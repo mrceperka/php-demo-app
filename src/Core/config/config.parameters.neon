@@ -1,0 +1,6 @@
+parameters:
+	db:
+		host: mariadb
+		username: demo
+		password: demo
+		database: demo

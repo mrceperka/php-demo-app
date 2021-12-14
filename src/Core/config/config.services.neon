@@ -1,0 +1,4 @@
+services:
+	- DemoApp\Core\Factory\RequestFactory
+	- DemoApp\Core\Factory\ResponseFactory
+	- DemoApp\Core\Factory\ServerFactory

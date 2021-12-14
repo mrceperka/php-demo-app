@@ -1,0 +1,3 @@
+services:
+	- DemoApp\Ingredient\Api\IngredientRouteGroup
+	- DemoApp\Ingredient\Api\GetIngredient
