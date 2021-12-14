@@ -11,7 +11,7 @@ Recipe module will allow you to create recipes. Pick specific ingredients and ma
 
 ## Example
 
-Recipe: Potato mash
+Recipe: Mashed potatoes
 
 Ingredients:
 
