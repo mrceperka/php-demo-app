@@ -39,8 +39,11 @@ final class ServerFactory
 		$app->setBasePath('/api');
 		$app->get('[/]', fn($_, ResponseInterface $response) => $response->withBody(Utils::streamFor('Hello')));
 		$app->group('/ingredient', $this->ingredientRouteGroup);
-		// TODO feature: not found handler
-		// TODO feature: cache file
+		
+		// TODO feature: (slim) not found handler
+		// TODO feature: (slim) error handler
+		
+		// TODO feature: (slim) cache file
 		
 		return $app;
 	}

@@ -7,3 +7,5 @@ ADD command.sh /var/docker-command.sh
 RUN chmod +x /var/docker-command.sh
 
 WORKDIR /var/docker
+
+CMD ["sh", "/var/docker-command.sh"]

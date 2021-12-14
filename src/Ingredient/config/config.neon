@@ -1,3 +1,6 @@
 services:
 	- DemoApp\Ingredient\Api\IngredientRouteGroup
 	- DemoApp\Ingredient\Api\GetIngredient
+	- DemoApp\Ingredient\Api\PostRandomIngredient
+	- DemoApp\Ingredient\Api\PostIngredient
+	- DemoApp\Ingredient\Api\PostIngredientBatch

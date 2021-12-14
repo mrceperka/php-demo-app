@@ -8,6 +8,19 @@ $configurator = new \Nette\Bootstrap\Configurator();
 
 $tempPath = __DIR__ . '/../temp';
 $logPath = __DIR__ . '/../log';
+
+$currentDir = getcwd();
+foreach (
+	[
+		$tempPath,
+		$logPath,
+	] as $dir
+) {
+	chdir($dir);
+	umask(0000);
+}
+chdir($currentDir);
+
 $debugMode = getenv('DEBUG_MODE') === '1';
 $configurator->setDebugMode($debugMode);
 
