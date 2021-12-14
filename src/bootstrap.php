@@ -2,35 +2,9 @@
 
 namespace DemoApp;
 
-require __DIR__ . '/../vendor/autoload.php';
+/** @var \Nette\Configurator $configurator */
+$configurator = require_once __DIR__ . '/configurator.php';
 
-$configurator = new \Nette\Bootstrap\Configurator();
+$container = $configurator->createContainer();
 
-$tempPath = __DIR__ . '/../temp';
-$logPath = __DIR__ . '/../log';
-
-$currentDir = getcwd();
-foreach (
-	[
-		$tempPath,
-		$logPath,
-	] as $dir
-) {
-	chdir($dir);
-	umask(0000);
-}
-chdir($currentDir);
-
-$debugMode = getenv('DEBUG_MODE') === '1';
-$configurator->setDebugMode($debugMode);
-
-$configurator->enableTracy($logPath);
-$configurator->setTempDirectory($tempPath);
-$configurator->setTimeZone('Europe/Prague');
-
-$configurator->addConfig(__DIR__ . '/Ingredient/config/config.neon');
-$configurator->addConfig(__DIR__ . '/Core/config/config.neon');
-
-$configurator->addParameters(['debugMode' => $debugMode]);
-
-return $configurator->createContainer();
+return $container;

@@ -4,3 +4,5 @@ services:
 	- DemoApp\Ingredient\Api\PostRandomIngredient
 	- DemoApp\Ingredient\Api\PostIngredient
 	- DemoApp\Ingredient\Api\PostIngredientBatch
+
+	- DemoApp\Ingredient\Service\IngredientService

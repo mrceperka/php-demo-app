@@ -1,0 +1,3 @@
+parameters:
+	db:
+		host: mariadb-test

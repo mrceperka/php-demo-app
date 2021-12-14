@@ -35,6 +35,17 @@ services:
             - .env.defaults
             - .env.local
 
+    mariadb-test:
+        image: mariadb:10.4.12
+        restart: unless-stopped
+        volumes:
+            - mariadb-test-data:/var/lib/mysql
+        networks:
+            - cookbook
+        env_file:
+            - .env.defaults
+            - .env.local
+
     rabbit:
         build: ./.docker/rabbit
         restart: unless-stopped
@@ -46,13 +57,14 @@ services:
 
 volumes:
     mariadb-data:
+    mariadb-test-data:
 
 networks:
     cookbook:
         ipam:
             driver: default
             config:
-                - subnet: ${SUBNET:-172.22.0.0}/24
+                -   subnet: ${SUBNET:-172.22.0.0}/24
 
 
 

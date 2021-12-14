@@ -1,6 +1,9 @@
 {
     "name": "mrceperka/php-demo-app",
     "type": "project",
+    "scripts": {
+        "tests": "codecept run"
+    },
     "require": {
         "php": ">=7.4 <8.1",
         "contributte/console": "^0.9.1",
@@ -15,10 +18,20 @@
     },
     "autoload": {
         "psr-4": {
-            "DemoApp\\": "src"
+            "DemoApp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DemoApp\\Tests\\Unit\\": "tests/unit",
+            "DemoApp\\Tests\\Functional\\": "tests/functional"
         }
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^2.0"
     }
 }
