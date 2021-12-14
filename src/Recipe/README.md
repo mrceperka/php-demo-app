@@ -22,3 +22,6 @@ Ingredients:
 - salt
 - nutmeg
 
+Instructions:
+
+Somehow get potatoes, then peel them...
