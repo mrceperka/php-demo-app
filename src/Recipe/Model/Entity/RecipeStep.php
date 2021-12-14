@@ -11,6 +11,8 @@ use Nextras\Orm\Entity\Entity;
  * @property int|null $estimatedPreparationTime
  * @property int      $servings
  *
+ * TODO feature: (design, orm) recipe step might be better with image
+ *
  * @property Recipe   $recipe {1:m Recipe::$steps}
  */
 class RecipeStep extends Entity
