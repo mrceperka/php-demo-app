@@ -14,7 +14,7 @@ final class IngredientService
 		$this->ingredientRepository = $ingredientRepository;
 	}
 	
-	public function create(string $name)
+	public function create(string $name): Ingredient
 	{
 		$ingredient = new Ingredient($name);
 		
@@ -22,12 +22,12 @@ final class IngredientService
 	}
 	
 	// TODO feature: (orm) update ingredient
-	public function update(Ingredient $ingredient, string $name)
+	public function update(Ingredient $ingredient, string $name): Ingredient
 	{
-	
+		throw new \LogicException('TODO');
 	}
 	
-	public function delete(Ingredient $ingredient)
+	public function delete(Ingredient $ingredient): void
 	{
 		$this->ingredientRepository->removeAndFlush($ingredient);
 	}

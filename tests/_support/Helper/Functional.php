@@ -10,7 +10,7 @@ use Nette\DI\Container;
 
 class Functional extends \Codeception\Module
 {
-	public static function setDI(Container $container)
+	public static function setDI(Container $container): void
 	{
 		Fixtures::add('container', $container);
 	}

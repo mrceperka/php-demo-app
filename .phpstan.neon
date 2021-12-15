@@ -1,0 +1,13 @@
+parameters:
+	level: 6
+	paths:
+		- src
+		- tests
+	excludePaths:
+		analyseAndScan:
+			- tests/_data
+			- tests/_output
+		analyse:
+			- tests/_support/_generated
+includes:
+	- vendor/nextras/orm-phpstan/extension.neon

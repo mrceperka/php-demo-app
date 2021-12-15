@@ -17,13 +17,13 @@ class IngredientServiceCest
 		$this->ingredientRepository = Functional::di()->getByType(IngredientRepository::class);
 	}
 	
-	public function testCreate(\FunctionalTester $I)
+	public function testCreate(\FunctionalTester $I):void
 	{
 		$ingredient = $this->service->create('test');
 		$I->assertEquals('test', $ingredient->name);
 	}
 	
-	public function testDelete(\FunctionalTester $I)
+	public function testDelete(\FunctionalTester $I):void
 	{
 		$ingredient = $this->service->create('test');
 		$id = $ingredient->id;

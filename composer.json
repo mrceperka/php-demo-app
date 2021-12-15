@@ -1,37 +1,40 @@
 {
-    "name": "mrceperka/php-demo-app",
-    "type": "project",
-    "scripts": {
-        "tests": "codecept run"
-    },
-    "require": {
-        "php": ">=7.4 <8.1",
-        "contributte/console": "^0.9.1",
-        "guzzlehttp/psr7": "^2.1",
-        "nette/bootstrap": "^3.1",
-        "nette/di": "^3.0",
-        "nextras/dbal": "^4.0",
-        "nextras/migrations": "^3.1",
-        "nextras/orm": "^4.0",
-        "slim/slim": "^4.9",
-        "tracy/tracy": "^2.8"
-    },
-    "autoload": {
-        "psr-4": {
-            "DemoApp\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "DemoApp\\Tests\\Unit\\": "tests/unit",
-            "DemoApp\\Tests\\Functional\\": "tests/functional"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "require-dev": {
-        "codeception/codeception": "^4.1",
-        "codeception/module-asserts": "^2.0"
-    }
+	"name": "mrceperka/php-demo-app",
+	"type": "project",
+	"scripts": {
+		"tests": "codecept run",
+		"stan": "phpstan analyse -c .phpstan.neon"
+	},
+	"require": {
+		"php": ">=7.4 <8.1",
+		"contributte/console": "^0.9.1",
+		"guzzlehttp/psr7": "^2.1",
+		"nette/bootstrap": "^3.1",
+		"nette/di": "^3.0",
+		"nextras/dbal": "^4.0",
+		"nextras/migrations": "^3.1",
+		"nextras/orm": "^4.0",
+		"slim/slim": "^4.9",
+		"tracy/tracy": "^2.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"DemoApp\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"DemoApp\\Tests\\Unit\\": "tests/unit",
+			"DemoApp\\Tests\\Functional\\": "tests/functional"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"require-dev": {
+		"codeception/codeception": "^4.1",
+		"codeception/module-asserts": "^2.0",
+		"nextras/orm-phpstan": "^1.0",
+		"phpstan/phpstan": "^1.2"
+	}
 }
