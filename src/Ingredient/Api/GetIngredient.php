@@ -3,6 +3,7 @@
 namespace DemoApp\Ingredient\Api;
 
 use GuzzleHttp\Psr7\Utils;
+use Nette\Utils\Json;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Routing\RouteContext;
@@ -21,7 +22,7 @@ final class GetIngredient
 			->withHeader('Content-Type', 'application/json')
 			->withBody(
 				Utils::streamFor(
-					json_encode(
+					Json::encode(
 						[
 							'id'   => $id,
 							'name' => 'test-name',

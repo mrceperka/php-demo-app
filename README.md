@@ -29,12 +29,13 @@ Wait for the first step, then reset the database with following the command:
 docker-compose exec -u $UID php php bin/console.php mig:res
 ```
 
-## Tests
+## Tests & static analysis
 
 In order to run the tests, the docker composition has to be running.
 
 ```shell
-docker-composer exec -u $UID php composer run tests
+docker-composer exec -u $UID php composer tests
+docker-composer exec -u $UID php composer stan
 ```
 
 ## Api

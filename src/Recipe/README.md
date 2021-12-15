@@ -1,13 +1,10 @@
 # Recipe feature module
 
-TODO feature: (design) implement recipes module
-
 Recipe module will allow you to create recipes. Pick specific ingredients and make a recipe.
 
-## Features
-
-- CRUD your recipes
-- filter your recipes by ingredients
+- TODO feature: (design) implement recipes module
+- TODO feature: (design, orm) CRUD your recipes
+- TODO feature: (orm, db) filter your recipes by ingredients
 
 ## Example
 
@@ -21,6 +18,8 @@ Ingredients:
 - 90g butter
 - salt
 - nutmeg
+
+Estimated preparation time: 20 minutes
 
 Instructions:
 

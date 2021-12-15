@@ -1,5 +1,5 @@
 parameters:
-	level: 6
+	level: max
 	paths:
 		- src
 		- tests
@@ -9,5 +9,10 @@ parameters:
 			- tests/_output
 		analyse:
 			- tests/_support/_generated
+	ignoreErrors:
+		-
+			message: '#Cannot call method getArgument\(\) on Slim\\Interfaces\\RouteInterface\|null#'
+			path: src/**/Api/*
 includes:
 	- vendor/nextras/orm-phpstan/extension.neon
+	- vendor/phpstan/phpstan-nette/extension.neon

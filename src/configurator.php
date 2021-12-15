@@ -2,14 +2,20 @@
 
 namespace DemoApp;
 
+use Nette\Bootstrap\Configurator;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-$configurator = new \Nette\Bootstrap\Configurator();
+$configurator = new Configurator();
 
 $tempPath = __DIR__ . '/../temp';
 $logPath = __DIR__ . '/../log';
 
 $currentDir = getcwd();
+if ($currentDir === false) {
+	echo 'Unable to get cwd' . PHP_EOL;
+	exit(1);
+}
 foreach (
 	[
 		$tempPath,

@@ -5,6 +5,7 @@ namespace DemoApp\Ingredient\Api;
 use DemoApp\Ingredient\Model\Entity\Ingredient;
 use DemoApp\Ingredient\Model\Repository\IngredientRepository;
 use GuzzleHttp\Psr7\Utils;
+use Nette\Utils\Json;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -29,7 +30,7 @@ final class PostRandomIngredient
 			->withHeader('Content-Type', 'application/json')
 			->withBody(
 				Utils::streamFor(
-					json_encode(
+					Json::encode(
 						[
 							'id'   => $entity->id,
 							'name' => $entity->name,
